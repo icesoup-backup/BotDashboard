@@ -1,4 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
+import dbfunctions
+
 
 dashboard = Flask("__name__")
 
@@ -16,7 +18,17 @@ def page(content):
 
 @dashboard.route("/dashboard/")
 def dash():
-    pass
+    conn = dbfunctions.createConnection("testDB")
+    rows = dbfunctions.getData(conn)
+    conn.close()
+    rows = tuple(rows)
+    return render_template("dashboard.html", rows=rows, index=0)
+
+@dashboard.route("/edit/")
+def update(username, sub):
+    conn = dbfunctions.createConnection("testDB")
+    rows = dbfunctions.updateSubLevel(conn, [username, sub])
+    conn.close()
 
 if __name__ == "__main__":
     dashboard.run(debug=True)

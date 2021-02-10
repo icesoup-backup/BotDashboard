@@ -1,0 +1,55 @@
+{% extends 'base.html' %} 
+{% block title %}Dashboard{% endblock %} 
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card mt-4">
+        <div class="card-body">
+          <!-- <a class="btn btn-success" href="/create">Add post</a> -->
+          <strong>Dashboard</strong>
+          <table class="table mt-3 table-hover table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Server Name</th>
+                <th scope="col">Subscription</th>
+                <th scope="col">Invite Link</th>
+                <th scope="col">Description</th>
+                <th scope="col">Last Share Time</th>
+                <th scope="col">Update Subscription</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in rows %}
+              <tr>
+                {% for cell in row %}
+                <td>{{cell}}</td>
+                {% endfor %}
+                <td>
+                  <div class="col-xs-2 text-center">
+                    <form>
+                      <div class="form-group row">
+                        <!-- <div class="col-xs-2"> -->
+                          <select class="form-control" id="subLevel">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </td>
+                <td><a class="btn btn-primary" href="/edit?username={{row[0]}}">Update</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
