@@ -32,16 +32,18 @@ def dash():
 @dashboard.route("/edit", methods=['GET', 'POST'])
 def update():
     # username = request.args.get('username')
-    sub = str(request.form)
-    print(sub)
-    print(request.method)
-    # if request.method == 'POST':
-    #     print(request.method)
-    #     sub = request.form.get('sub-level', 0)
+    req = ""
+    if request.method == 'POST':
+        print(request.method)
+        req = request.form.get('sub-level', 0).split("[{(..++--**//)}]")
+        # print(req)
+    
+    username = req[0]
+    sub = int(req[1])
     # print(f"{username} {sub}")
-    # conn = dbfunctions.createConnection("testDB")
-    # dbfunctions.updateSubLevel(conn, [sub, username])
-    # conn.close()
+    conn = dbfunctions.createConnection("testDB")
+    dbfunctions.updateSubLevel(conn, [sub, username])
+    conn.close()
     return redirect(url_for("dash"))
 
 
