@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title%}Plans{% endblock %}
+{% block content %}
+<h1 class="mb-3">Plans</h1>
+
+<div class="card-deck mt-4 d-flex justify-content-center">
+    <div class="card bg-secondary" style="width: 18rem;">
+        <div class="card-header">
+          Free
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-success">$ Free</li>
+          <li class="list-group-item text-dark">1 Share / 24 Hours</li>
+          <li class="list-group-item text-dark">Manual Sharing</li>
+          <li class="list-group-item text-dark">Custom Prefix</li>
+          <li class="list-group-item list-group-item-danger"><strike>Custom Channels</strike></li>
+          <li class="list-group-item list-group-item-danger"><strike>Server Description</strike></li>
+        </ul>
+    </div>
+
+    <div class="card bg-info" style="width: 18rem;">
+        <div class="card-header">
+          Tier 1
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-success">$ 1</li>
+          <li class="list-group-item text-dark">1 Share / 12 Hours</li>
+          <li class="list-group-item text-dark">Manual Sharing</li>
+          <li class="list-group-item text-dark">Custom Prefix</li>
+          <li class="list-group-item text-dark">Custom Channels</li>
+          <li class="list-group-item list-group-item-danger"><strike>Server Description</strike></li>
+        </ul>
+    </div>
+</div>
+
+<div class="card-deck mt-4 d-flex justify-content-center">
+    <div class="card bg-warning" style="width: 18rem;">
+        <div class="card-header">
+          Tier 2
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-success">$ 3</li>
+          <li class="list-group-item text-dark">1 Share / 8 Hours</li>
+          <li class="list-group-item text-dark">Manual Sharing</li>
+          <li class="list-group-item text-dark">Custom Prefix</li>
+          <li class="list-group-item text-dark">Custom Channels</li>
+          <li class="list-group-item text-dark">Server Description</li>
+        </ul>
+    </div>
+
+    <div class="card bg-success" style="width: 18rem;">
+        <div class="card-header">
+          Tier 3
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-success">$ 5</li>
+          <li class="list-group-item text-dark">1 Share / 4 Hours</li>
+          <li class="list-group-item text-dark">Automatic Sharing / 4 Hours</li>
+          <li class="list-group-item text-dark">Custom Prefix</li>
+          <li class="list-group-item text-dark">Custom Channels</li>
+          <li class="list-group-item text-dark">Server Description</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

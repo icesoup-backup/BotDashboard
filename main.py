@@ -15,6 +15,16 @@ def home():
     return redirect(url_for("index"))
 
 
+@dashboard.route("/features/")
+def features():
+    return render_template("features.html")
+
+
+@dashboard.route("/pricing/")
+def pricing():
+    return render_template("pricing.html")
+
+
 @dashboard.route("/<content>/")
 def error(content):
     return render_template("404.html", content=content.capitalize())
@@ -37,7 +47,7 @@ def update():
         print(request.method)
         req = request.form.get('sub-level', 0).split("[{(..++--**//)}]")
         # print(req)
-    
+
     username = req[0]
     sub = int(req[1])
     # print(f"{username} {sub}")

@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+{% block title%}Features{% endblock %} 
+{% block content %}
+<h1 class="mb-3">Features</h1>
+<div class="card-group mt-4 d-flex justify-content-center">
+  <div class="card bg-secondary mb-3" style="max-width: 18rem">
+    <div class="card-header">Server Wide Sharing</div>
+    <div class="card-body">
+      <p class="card-text">
+        Server invites are shared among all the servers with the bot.
+      </p>
+    </div>
+  </div>
+
+  <div class="card bg-secondary mb-3" style="max-width: 18rem">
+    <div class="card-header">Automatic Entries</div>
+    <div class="card-body">
+      <p class="card-text">
+        Entires are added to the database automatically when the bot joins a server,
+        providing a seamless experience to the user.
+      </p>
+    </div>
+  </div>
+
+  <div class="card bg-secondary mb-3" style="max-width: 18rem">
+    <div class="card-header">Server Specific Command Prefix</div>
+    <div class="card-body">
+      <p class="card-text">
+        Bot prefixes can be changed using the <strong> <u>setprefix</u> </strong> command.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-group mt-4 d-flex justify-content-center">
+  <div class="card bg-secondary mb-3" style="max-width: 18rem">
+    <div class="card-header">Channel Customization</div>
+    <div class="card-body">
+      <p class="card-text">
+        Default sharing channel can be customized using the <strong><u>setchannel</u></strong> command.
+      </p>
+    </div>
+  </div>
+
+  <div class="card bg-secondary mb-3" style="max-width: 18rem">
+    <div class="card-header">Server Descriptions</div>
+    <div class="card-body">
+      <p class="card-text">
+        Server descriptions can be changed using the <strong><u>description</u></strong> command.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
