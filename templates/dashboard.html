@@ -4,11 +4,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <div class="card mt-4">
+      <div class="card mt-4 bg-secondary">
         <div class="card-body">
           <!-- <a class="btn btn-success" href="/create">Add post</a> -->
-          <strong>Dashboard</strong>
-          <table class="table mt-3 table-hover table-bordered">
+          <h2>Dashboard</h2>
+          <table class="table mt-3 table-hover table-bordered table-light">
             <thead>
               <tr>
                 <th scope="col">Name</th>
@@ -30,7 +30,7 @@
                 <td>
                   <form action="/edit" method="POST">
                     <div class="input-group">
-                      <select class="form-select mb-3" id="sub-level" name="sub-level" onchange="this.form.submit()">
+                      <select class="form-select" id="sub-level" name="sub-level" onchange="this.form.submit()">
                         <option selected>Select Subscription</option>
                         <option value="{{row[0]}}[{(..++--**//)}]0">0</option>
                         <option value="{{row[0]}}[{(..++--**//)}]1">1</option>

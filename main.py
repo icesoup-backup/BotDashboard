@@ -16,7 +16,7 @@ def home():
 
 
 @dashboard.route("/<content>/")
-def page(content):
+def error(content):
     return render_template("404.html", content=content.capitalize())
 
 
