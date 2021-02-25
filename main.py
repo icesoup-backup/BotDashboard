@@ -3,10 +3,13 @@ from flask.globals import session
 import dbfunctions
 import random
 import string
+import os
 
 dashboard = Flask("__name__")
+application = dashboard
 dashboard.secret_key = ''.join(random.choices(string.ascii_uppercase + string.ascii_letters +
                                               string.ascii_lowercase + string.punctuation + string.digits, k=16))
+# databaseLocation = os.getenv("DATABASE")
 
 
 @dashboard.route("/")  # this sets the route to this page
@@ -74,4 +77,4 @@ def update():
 
 
 if __name__ == "__main__":
-    dashboard.run(debug=True)
+    dashboard.run()
